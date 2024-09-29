@@ -1,0 +1,215 @@
+/*
+                        Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --DDcyan: hsl(156, 42%, 18%);
+    --Rose800: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);
+    --Rose700: rgba(243, 229, 216, 255);
+}
+
+body {
+    background-color: var(--Cream);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 38rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--White);
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.prod-img {
+    flex: 1 0 50%;
+}
+
+.prod-info {
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prod-info > p:first-child {
+    color: var(--Darkgrayishblue);
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.3rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--Verydarkblue);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.prod-info p:nth-child(3) {
+    color: var(--Darkgrayishblue);
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+.price {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.price > p:first-child {
+    color: var(--Darkcyan);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.price p:last-child {
+    color: var(--Darkgrayishblue);
+    font-family: "Fraunces", serif;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.cart {
+    background-color: var(--Darkcyan);
+    border-radius: 0.625rem;
+    width: 15rem;
+    height: 3rem;
+    box-shadow: none;
+    font-family: "Montserrat", sans-serif;
+    color: var(--Cream);
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.cart p {
+    margin-left: 1rem;
+}
+
+.cart:hover {
+    cursor: pointer;
+    background-color: var(--DDcyan);
+    transition: 0.3s all ease-in-out;
+}
+
+.contribute {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.contribute a {
+    color: var(--Rose800);
+    text-decoration: none;
+    margin: 0.2rem;
+}
+
+.contribute a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Mobile view (max width: 375px) */
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        flex-direction: column; 
+        height: auto; 
+        overflow: hidden; 
+    }
+
+    .prod-img {
+        width: 100%; 
+        height: auto; 
+        overflow: hidden; 
+    }
+
+    img {
+        width: 100%; 
+        height: auto; 
+        max-height: 220px; 
+        object-fit: cover; 
+        border-radius: 0.625rem 0 0 0.625rem; 
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .prod-info > p:first-child{
+        font-size: 0.8rem;
+    }
+
+    .price > p:first-child {
+        font-size: 1.5rem; 
+        
+    }
+    .prod-info p:nth-child(3){
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .prod-info p:last-child{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .cart {
+        width: 100%; 
+        height: 3rem; 
+    }
+
+    .contribute {
+        font-size: 0.7rem;
+        text-align: center; 
+    }
+}
